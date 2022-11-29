@@ -4,6 +4,9 @@ services:
     ports:
       - 8080:3000
     command: npm start
+    environment:
+      - WDS_SOCKET_PORT=8080
+      - WATCHPACK_POLLING=true
     volumes:
       - ./client/src/:/app/src/
 
